@@ -1,11 +1,11 @@
-Employee: employee.o test.o
-	g++ employee.o test.o -o employee
+Employee: employee.o main.o
+	g++ employee.o main.o -o employee
 
 employee.o: employee.h employee.cpp
-	g++ employee.h employee.cpp -c
+	g++ -c employee.h employee.cpp
 
-test.o: test.cpp
-	g++ test.cpp -c
+main.o: main.cpp
+	g++ -c main.cpp
 
 clean:
 	rm *.o employee *.h.gch
